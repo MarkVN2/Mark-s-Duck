@@ -43,7 +43,7 @@ public class ChatWithDocuments {
 
         public static void main(String[] args) throws Exception {
 
-            Document document = loadDocument(toPath("example-files/story-about-happy-carrot.txt"));
+            Document document = loadDocument(toPath(""));
 
             EmbeddingModel embeddingModel = OpenAiEmbeddingModel.withApiKey(ApiKeys.OPENAI_API_KEY);
 
@@ -63,7 +63,7 @@ public class ChatWithDocuments {
                     // .promptTemplate() // you can override default prompt template
                     .build();
 
-            String answer = chain.execute("Who is Charlie?");
+            String answer = chain.execute("");
             System.out.println(answer); // Charlie is a cheerful carrot living in VeggieVille...
         }
     }
