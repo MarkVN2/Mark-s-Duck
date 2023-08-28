@@ -24,16 +24,17 @@ import net.byteboost.duck.App;
 
 public class  Loader {
     
-
-    public static Document load(String file){
+    //Transforms DOCX,PDF,TXT,PPT to Document
+    public static Document toDoc(String file){
     Path filePath = toPath(file);
     Document document = FileSystemDocumentLoader.loadDocument(filePath);
     return document;
     }
 
-    public static String loadintoAI(Document filepath){
+    //Loads the file and asks a question to the AI that returns the awnser
+    public static String loadIntoOpenAI(Document file, String question){
 
-        Document document = filepath;
+        Document document = file;
 
         EmbeddingModel embeddingModel = OpenAiEmbeddingModel.withApiKey(ApiKeys.OPENAI_API_KEY);
 
@@ -53,7 +54,7 @@ public class  Loader {
                 // .promptTemplate() // you can override default prompt template
                 .build();
 
-        String answer = chain.execute("Quem é o autor do livro?");
+        String answer = chain.execute(question);
         return answer; 
     }
 
@@ -66,3 +67,5 @@ public class  Loader {
         }
     }
 }
+
+
