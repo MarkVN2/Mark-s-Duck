@@ -9,8 +9,14 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'java'
+    id 'org.javamodularity.moduleplugin' version "1.8.12"
+    id 'org.openjfx.javafxplugin' version '0.0.14'
 }
-
+javafx {
+    version = "20"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
@@ -23,7 +29,6 @@ dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:30.1.1-jre'
     implementation 'dev.langchain4j:langchain4j:0.21.0'
-    implementation 'org.openjfx:javafx:20.0.2'
     implementation 'com.mysql:mysql-connector-j:8.1.0'
 }
 
@@ -31,7 +36,6 @@ application {
     // Define the main class for the application.
     mainClass = 'duck.App'
 }
-
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()

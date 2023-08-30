@@ -1,6 +1,11 @@
 
 package net.byteboost.duck;
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import net.byteboost.duck.utils.AIutils;
 import dev.langchain4j.data.document.Document;
 
@@ -29,25 +34,18 @@ import dev.langchain4j.data.document.Document;
 
 */
 
-public class App {
+public class App extends Application {
 
-    public static void main(String[] args) {
-
-        // OpenAiChatModel model = OpenAiChatModel.withApiKey(ApiKeys.OPENAI_API_KEY);
-
-        // AiMessage answer = model.sendUserMessage("Hello anyone there?");
-
-        // System.out.println(answer.text());
-
-        String test_txt0 = "/test-docs/aanatomiadoestado.pdf";
-        
-        String test_txt1 = "/test-docs/patrimonial-analysis-of-financial-stability.txt";
-
-        Document  converted_txt = AIutils.toDoc(test_txt1);
-        
-        System.out.println(converted_txt);
-
-        System.out.println(AIutils.loadIntoOpenAI(converted_txt, "how many times does 'lorem' appears in the  text?"));
-
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        stage.setTitle("Login");
+        stage.setScene(new Scene(root,500,500));
+        stage.show();
     }
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+
 }

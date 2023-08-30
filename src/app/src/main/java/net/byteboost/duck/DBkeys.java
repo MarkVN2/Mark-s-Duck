@@ -4,6 +4,19 @@ package net.byteboost.duck;
  * Contains key information about the database like SQL user  and SQL password.
  */
 public class DBkeys {
-    public static String SQLUser = "root";
-    public static String SQLPassword = "";
+    private static String SQLUser = "root";
+    private static String SQLPassword = "markos";
+
+    public static String getSQLUser(){
+        return SQLUser;
+    }
+    public static String getSQLPassword(){
+        return SQLPassword;
+    }
+    public void setSQLUser(String user){
+        this.SQLUser = user;
+    }
+    public void setSQLPassword(String password){
+        this.SQLPassword = password;
+    }
 }
