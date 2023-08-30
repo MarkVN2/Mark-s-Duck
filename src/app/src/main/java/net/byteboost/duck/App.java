@@ -1,7 +1,7 @@
 
 package net.byteboost.duck;
 
-import net.byteboost.duck.functions.AIutils;
+import net.byteboost.duck.utils.AIutils;
 import dev.langchain4j.data.document.Document;
 
 /*TODO

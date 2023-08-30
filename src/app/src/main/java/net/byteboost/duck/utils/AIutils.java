@@ -1,4 +1,4 @@
-package net.byteboost.duck.functions;
+package net.byteboost.duck.utils;
 
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -29,14 +29,11 @@ public class  AIutils {
     //Transforms DOCX,PDF,TXT,PPT to Document
     public static Document toDoc(String file){
     Path filePath = toPath(file);
-    Document document = FileSystemDocumentLoader.loadDocument(filePath);
-    return document;
+    return FileSystemDocumentLoader.loadDocument(filePath);
     }
 
-    //Loads the file and asks a question to the AI that returns the awnser
+    //Loads the file and asks a question to the AI that returns the answer
     public static String loadIntoOpenAI(Document file, String question){
-
-        Document document = file;
 
         EmbeddingModel embeddingModel = OpenAiEmbeddingModel.withApiKey(ApiKeys.OPENAI_API_KEY);
 
@@ -47,7 +44,7 @@ public class  AIutils {
                 .embeddingModel(embeddingModel)
                 .embeddingStore(embeddingStore)
                 .build();
-        ingestor.ingest(document);
+        ingestor.ingest(file);
 
         ConversationalRetrievalChain chain = ConversationalRetrievalChain.builder()
                 .chatLanguageModel(OpenAiChatModel.withApiKey(ApiKeys.OPENAI_API_KEY))
