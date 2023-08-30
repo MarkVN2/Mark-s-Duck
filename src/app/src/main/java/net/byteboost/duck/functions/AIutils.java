@@ -20,9 +20,11 @@ import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
 import net.byteboost.duck.ApiKeys;
 import net.byteboost.duck.App;
 
-// import static dev.langchain4j.data.document.FileSystemDocumentLoader.loadDocument;
 
-public class  Loader {
+/**
+ * Contains all the AI utilities used in Duck like questioning with the AI consultant.
+ */
+public class  AIutils {
     
     //Transforms DOCX,PDF,TXT,PPT to Document
     public static Document toDoc(String file){

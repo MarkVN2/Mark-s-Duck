@@ -1,7 +1,7 @@
 
 package net.byteboost.duck;
 
-import net.byteboost.duck.functions.Loader;
+import net.byteboost.duck.functions.AIutils;
 import dev.langchain4j.data.document.Document;
 
 /*TODO
@@ -43,11 +43,11 @@ public class App {
         
         String test_txt1 = "/test-docs/patrimonial-analysis-of-financial-stability.txt";
 
-        Document  converted_txt = Loader.toDoc(test_txt1);
+        Document  converted_txt = AIutils.toDoc(test_txt1);
         
         System.out.println(converted_txt);
 
-        System.out.println(Loader.loadIntoOpenAI(converted_txt, "how many times does 'lorem' appears in the  text?"));
+        System.out.println(AIutils.loadIntoOpenAI(converted_txt, "how many times does 'lorem' appears in the  text?"));
 
     }
 }
