@@ -3,11 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.LoginController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.LoginController">
    <children>
       <Button fx:id="button_login" layoutX="219.0" layoutY="299.0" mnemonicParsing="false" text="Log IN" />
-      <PasswordField fx:id="password_field" layoutX="219.0" layoutY="239.0" prefHeight="25.0" prefWidth="162.0" promptText="Senha" />
-      <TextField fx:id="username_field" layoutX="219.0" layoutY="200.0" prefHeight="25.0" prefWidth="162.0" promptText="Usuario" />
+      <PasswordField fx:id="tf_password" layoutX="219.0" layoutY="239.0" prefHeight="25.0" prefWidth="162.0" promptText="Senha" />
+      <TextField fx:id="tf_username" layoutX="219.0" layoutY="200.0" prefHeight="25.0" prefWidth="162.0" promptText="Usuario" />
       <Separator layoutY="272.0" prefHeight="0.0" prefWidth="593.0" />
       <Button fx:id="button_signup" layoutX="329.0" layoutY="299.0" mnemonicParsing="false" text="Sign up" />
    </children>

@@ -32,13 +32,13 @@ public class DButils {
                 alert.setContentText("You cannot take this username.");
                 alert.show();
             }else{
-                psInsert = connection.prepareStatement("INSERT INTO users (username, password, access_level VALUES (?, ? , ?))");
+                psInsert = connection.prepareStatement("INSERT INTO users (username, password, access_level) VALUES (?, ? , ?)");
                 psInsert.setString(1,username);
                 psInsert.setString(2,password);
                 psInsert.setString(3,access_level);
                 psInsert.executeUpdate();
 
-                GUIutils.changeScene(event,"/fxml/test.fxml", "YOUARELOGGEDINBITCH",username, null, access_level);
+                GUIutils.changeScene(event,"/fxml/sing_up.fxml", "YOUARELOGGEDIN",username, null, access_level);
             }
         } catch (SQLException exception){
             exception.printStackTrace();
@@ -75,7 +75,7 @@ public class DButils {
 
     }
 
-    public static void LogInUser(ActionEvent event, String username, String password, String access_level){
+    public static void LogInUser(ActionEvent event, String username, String password){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
@@ -93,9 +93,9 @@ public class DButils {
             }else {
                 while(resultSet.next()){
                     String retrievedPassword = resultSet.getString("password");
-                    String retrievedAccessLevel = resultSet.getString("access_level");
+
                     if (retrievedPassword.equals(password)){
-                        GUIutils.changeScene(event,"/fxml/test.fxml", "YOUARELOGGEDIN!",username, null, retrievedAccessLevel);
+                        GUIutils.changeScene(event,"/fxml/test.fxml", "YOUARELOGGEDIN!",username, null,"1");
                     }else{
                         System.out.print("Password does not match username");
                         Alert alert = new Alert(Alert.AlertType.ERROR);

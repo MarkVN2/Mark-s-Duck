@@ -29,7 +29,7 @@ public class LoginController implements Initializable {
         button_login.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                DButils.LogInUser(event, tf_username.getText(), tf_password.getText(), null);
+                DButils.LogInUser(event, tf_username.getText(), tf_password.getText());
             }
         });
 

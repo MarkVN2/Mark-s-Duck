@@ -31,7 +31,7 @@ public class SignUpController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 if (!tf_username.getText().trim().isEmpty() && !tf_password.getText().trim().isEmpty()  && !tf_access_level.getText().trim().isEmpty()){
-                    DButils.LogInUser(event, tf_username.getText(), tf_password.getText(), tf_access_level.getText());
+                    DButils.SingUpUser(event, tf_username.getText(), tf_password.getText(), tf_access_level.getText());
                 }else{
                     System.out.println("Not all fields are filled");
                     Alert alert = new Alert(Alert.AlertType.ERROR);
