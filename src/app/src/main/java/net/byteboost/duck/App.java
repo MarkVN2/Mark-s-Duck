@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 import net.byteboost.duck.utils.AIutils;
 import dev.langchain4j.data.document.Document;
 
+import java.util.Objects;
+
 /*TODO
 
 - not use OpenAI for the AI;
@@ -38,7 +40,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/login.fxml")));
         stage.setTitle("Login");
         stage.setScene(new Scene(root,500,500));
         stage.show();

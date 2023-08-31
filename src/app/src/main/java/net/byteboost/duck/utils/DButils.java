@@ -38,7 +38,7 @@ public class DButils {
                 psInsert.setString(3,access_level);
                 psInsert.executeUpdate();
 
-                GUIutils.changeScene(event,"test.fxml", "YOUARELOGGEDINBITCH",username, null, access_level);
+                GUIutils.changeScene(event,"/fxml/test.fxml", "YOUARELOGGEDINBITCH",username, null, access_level);
             }
         } catch (SQLException exception){
             exception.printStackTrace();
@@ -95,7 +95,7 @@ public class DButils {
                     String retrievedPassword = resultSet.getString("password");
                     String retrievedAccessLevel = resultSet.getString("access_level");
                     if (retrievedPassword.equals(password)){
-                        GUIutils.changeScene(event,"test.fxml", "YOUARELOGGEDIN!",username, null, retrievedAccessLevel);
+                        GUIutils.changeScene(event,"/fxml/test.fxml", "YOUARELOGGEDIN!",username, null, retrievedAccessLevel);
                     }else{
                         System.out.print("Password does not match username");
                         Alert alert = new Alert(Alert.AlertType.ERROR);

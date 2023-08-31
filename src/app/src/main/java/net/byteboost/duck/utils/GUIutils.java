@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import net.byteboost.duck.gui.TestController;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class GUIutils {
     public static void changeScene(ActionEvent event , String fxmlFile,String title, String username, String password, String access_level){
@@ -25,7 +26,8 @@ public class GUIutils {
             }
         }else {
             try{
-                root = FXMLLoader.load(GUIutils.class.getResource(fxmlFile));
+                FXMLLoader loader = new FXMLLoader(GUIutils.class.getResource(fxmlFile));
+                root = loader.load();
             }catch (IOException exception){
                 exception.printStackTrace();
             }

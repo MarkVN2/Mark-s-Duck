@@ -24,7 +24,7 @@ public class TestController implements Initializable {
         button_logout.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                GUIutils.changeScene(actionEvent, "login.fxml","Login", null , null , null );
+                GUIutils.changeScene(actionEvent, "/fxml/login.fxml","Login", null , null , null );
             }
         });
     }
