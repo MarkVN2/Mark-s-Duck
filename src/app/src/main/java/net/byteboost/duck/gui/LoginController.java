@@ -36,9 +36,8 @@ public class LoginController implements Initializable {
         button_signup.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-              GUIutils.changeScene(event, "/fxml/sing_up.fxml", "Sing UP!", null , null, null);
+              GUIutils.changeScene(event, "/fxml/signup.fxml", "Sign UP!", null , null, null);
             }
         });
-
     }
 }

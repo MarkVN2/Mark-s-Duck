@@ -3,10 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.TestController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.TestController">
    <children>
-      <Label fx:id="label_username" layoutX="272.0" layoutY="108.0" text="pedro" />
-      <Label fx:id="label_access" layoutX="272.0" layoutY="151.0" text="access" />
-      <Button fx:id="button_logout" layoutX="262.0" layoutY="200.0" mnemonicParsing="false" text="Logout" />
+      <Label fx:id="label_username" alignment="CENTER" contentDisplay="CENTER" layoutX="254.0" layoutY="145.0" text="Hello (username)." textAlignment="CENTER" />
+      <Label fx:id="label_access" alignment="CENTER" contentDisplay="CENTER" layoutX="238.0" layoutY="183.0" text="Your access level is" textAlignment="CENTER" />
+      <Button fx:id="button_logout" layoutX="261.0" layoutY="222.0" mnemonicParsing="false" text="Logout" />
    </children>
 </AnchorPane>

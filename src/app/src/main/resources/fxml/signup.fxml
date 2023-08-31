@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.SignUpController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.SignUpController">
    <children>
        <Button fx:id="button_login" layoutX="260.0" layoutY="325.0" mnemonicParsing="false" text="LoginScreen" />
        <PasswordField fx:id="tf_password" layoutX="219.0" layoutY="208.0" prefHeight="25.0" prefWidth="162.0" promptText="Senha" />

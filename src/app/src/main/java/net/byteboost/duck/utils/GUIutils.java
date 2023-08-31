@@ -34,7 +34,7 @@ public class GUIutils {
         }
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle(title);
-        stage.setScene(new Scene(root,500,500));
+        stage.setScene(new Scene(root));
         stage.show();
     }
 }

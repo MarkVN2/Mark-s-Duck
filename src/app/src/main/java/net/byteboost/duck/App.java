@@ -6,8 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import net.byteboost.duck.utils.AIutils;
-import dev.langchain4j.data.document.Document;
 
 import java.util.Objects;
 
@@ -40,9 +38,13 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/sign_up.fxml")));
+
+        final boolean resizable = stage.isResizable();
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/login.fxml")));
         stage.setTitle("Login");
-        stage.setScene(new Scene(root,500,500));
+        stage.setResizable(!resizable);
+        stage.setScene(new Scene(root));
         stage.show();
     }
     public static void main(String[] args) {

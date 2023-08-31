@@ -5,7 +5,7 @@ package net.byteboost.duck;
  */
 public class DBkeys {
     private static String SQLUser = "root";
-    private static String SQLPassword = "fatec";
+    private static String SQLPassword = "";
 
     public static String getSQLUser(){
         return SQLUser;

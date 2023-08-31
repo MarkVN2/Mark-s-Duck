@@ -29,7 +29,7 @@ public class TestController implements Initializable {
         });
     }
     public void setUserInformation(String username, String access_level){
-        label_access.setText("Seu nível de acesso é " + access_level);
-        label_username.setText("Olá usuario " + username + ".");
+        label_username.setText("Hello " + username + "."); 
+        label_access.setText("Your access level is " + access_level);
     }
 }

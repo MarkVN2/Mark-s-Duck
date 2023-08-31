@@ -38,7 +38,7 @@ public class DButils {
                 psInsert.setString(3,access_level);
                 psInsert.executeUpdate();
 
-                GUIutils.changeScene(event,"/fxml/sing_up.fxml", "YOUARELOGGEDIN",username, null, access_level);
+                GUIutils.changeScene(event,"/fxml/signup.fxml", "YOUARELOGGEDIN",username, null, access_level);
             }
         } catch (SQLException exception){
             exception.printStackTrace();
@@ -79,11 +79,16 @@ public class DButils {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
+        ResultSet resultSetAccessLevel = null;
         try{
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/duck",DBkeys.getSQLUser(), DBkeys.getSQLPassword());
             preparedStatement = connection.prepareStatement("SELECT password FROM users WHERE username = ?");
             preparedStatement.setString(1,username);
             resultSet = preparedStatement.executeQuery();
+
+            preparedStatement = connection.prepareStatement("SELECT access_level FROM users WHERE username = ?");
+            preparedStatement.setString(1,username);
+            resultSetAccessLevel = preparedStatement.executeQuery();
 
             if (!resultSet.isBeforeFirst()){
                 System.out.println("User not found");
@@ -91,11 +96,11 @@ public class DButils {
                 alert.setContentText("Provided credentials are wrong");
                 alert.show();
             }else {
-                while(resultSet.next()){
+                while(resultSet.next() && resultSetAccessLevel.next()){
                     String retrievedPassword = resultSet.getString("password");
-
+                    String retrievedAccessLevel = resultSetAccessLevel.getString("access_level");
                     if (retrievedPassword.equals(password)){
-                        GUIutils.changeScene(event,"/fxml/test.fxml", "YOUARELOGGEDIN!",username, null,"1");
+                        GUIutils.changeScene(event,"/fxml/test.fxml", "YOUARELOGGEDIN!",username, null, retrievedAccessLevel);
                     }else{
                         System.out.print("Password does not match username");
                         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -117,6 +122,13 @@ public class DButils {
             if (resultSet != null){
                 try{
                     resultSet.close();
+                }catch(SQLException exception){
+                    exception.printStackTrace();
+                }
+            }
+            if (resultSetAccessLevel != null){
+                try{
+                    resultSetAccessLevel.close();
                 }catch(SQLException exception){
                     exception.printStackTrace();
                 }
