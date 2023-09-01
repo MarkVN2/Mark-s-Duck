@@ -1,0 +1,17 @@
+/*If it is an external font, you need to load it; @font-face {...} */
+
+.textfield{
+ -fx-background-color: #292828;
+ -fx-background-radius: 0px;
+ -fx-text-inner-color: #ffff;
+}
+#login_btn{
+-fx-background-color: #33d037;
+-fx-background-radius: 12px;
+-fx-font-size: 20;
+}
+#login_btn:hover{
+-fx-scale-x: 1.05;
+-fx-scale-y: 1.05;
+}
+

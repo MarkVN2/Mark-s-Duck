@@ -7,15 +7,15 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="522.0" style="-fx-background-color: #1e1e1e;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.LoginController">
    <children>
-      <Button fx:id="button_login" layoutX="136.0" layoutY="455.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" style="-fx-background-color: #33d037; -fx-background-radius: 12px;" text="LOG IN" textFill="WHITE">
+      <Button id="login_btn" fx:id="button_login" layoutX="136.0" layoutY="455.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" stylesheets="@../css/login.css" text="LOG IN" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono Regular" size="24.0" />
          </font></Button>
-      <PasswordField fx:id="tf_password" layoutX="76.0" layoutY="384.0" prefHeight="42.0" prefWidth="370.0" promptText="PASSWORD" style="-fx-background-color: #292828; -fx-background-radius: 0px; -fx-text-inner-color: #ffff;">
+      <PasswordField fx:id="tf_password" layoutX="76.0" layoutY="384.0" prefHeight="42.0" prefWidth="370.0" promptText="PASSWORD" styleClass="textfield" stylesheets="@../css/login.css">
          <font>
             <Font name="JetBrains Mono Regular" size="14.0" />
          </font></PasswordField>
-      <TextField fx:id="tf_username" layoutX="76.0" layoutY="299.0" prefHeight="42.0" prefWidth="370.0" promptText="EMAIL ADDRESS OR USERNAME" style="-fx-background-color: #292828; -fx-background-radius: 0px; -fx-text-inner-color: #ffff;">
+      <TextField fx:id="tf_username" layoutX="76.0" layoutY="299.0" prefHeight="42.0" prefWidth="370.0" promptText="EMAIL ADDRESS OR USERNAME" styleClass="textfield" stylesheets="@../css/login.css">
          <font>
             <Font name="JetBrains Mono Regular" size="14.0" />
          </font></TextField>
