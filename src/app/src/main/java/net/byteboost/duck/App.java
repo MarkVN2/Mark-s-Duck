@@ -1,11 +1,13 @@
 
 package net.byteboost.duck;
 
+import dev.langchain4j.data.document.Document;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import net.byteboost.duck.utils.AIutils;
 
 import java.util.Objects;
 
@@ -34,8 +36,7 @@ import java.util.Objects;
 
 */
 
-public class App extends Application {
-
+public class App extends Application{
     @Override
     public void start(Stage stage) throws Exception {
 
