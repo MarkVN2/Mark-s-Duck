@@ -4,6 +4,8 @@ import javafx.scene.control.Alert;
 import net.byteboost.duck.DBkeys;
 
 import javafx.event.ActionEvent;
+import net.byteboost.duck.gui.LoginController;
+
 import java.sql.*;
 
 /**
@@ -92,9 +94,6 @@ public class DButils {
 
             if (!resultSet.isBeforeFirst()){
                 System.out.println("User not found");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Provided credentials are wrong");
-                alert.show();
             }else {
                 while(resultSet.next() && resultSetAccessLevel.next()){
                     String retrievedPassword = resultSet.getString("password");

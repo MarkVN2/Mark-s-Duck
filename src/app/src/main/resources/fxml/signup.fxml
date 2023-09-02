@@ -2,14 +2,59 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1e1e1e;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.SignUpController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="522.0" style="-fx-background-color: #1e1e1e;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.SignUpController">
    <children>
-       <Button fx:id="button_login" layoutX="260.0" layoutY="325.0" mnemonicParsing="false" text="LoginScreen" />
-       <PasswordField fx:id="tf_password" layoutX="219.0" layoutY="208.0" prefHeight="25.0" prefWidth="162.0" promptText="Senha" />
-       <TextField fx:id="tf_username" layoutX="219.0" layoutY="175.0" prefHeight="25.0" prefWidth="162.0" promptText="Usuario" />
-       <Separator layoutY="272.0" prefHeight="0.0" prefWidth="593.0" />
-       <Button fx:id="button_signup" layoutX="272.0" layoutY="289.0" mnemonicParsing="false" text="Sign up" />
-      <TextField fx:id="tf_access_level" layoutX="226.0" layoutY="241.0" promptText="access_level" />
+      <Button id="login_btn" fx:id="button_signup" layoutX="136.0" layoutY="455.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" stylesheets="@../css/login.css" text="SIGN IN" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Regular" size="24.0" />
+         </font></Button>
+      <TextField fx:id="tf_username" layoutX="76.0" layoutY="148.0" prefHeight="42.0" prefWidth="370.0" promptText="EMAIL ADDRESS OR USERNAME" styleClass="textfield" stylesheets="@../css/login.css">
+         <font>
+            <Font name="JetBrains Mono Regular" size="14.0" />
+         </font></TextField>
+      <Button fx:id="button_login" layoutX="293.0" layoutY="532.0" mnemonicParsing="false" styleClass="extra-text" stylesheets="@../css/login.css" text="LOGIN" textFill="WHITE" underline="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="14.0" />
+         </font></Button>
+      <Label layoutX="76.0" layoutY="111.0" prefHeight="20.0" prefWidth="329.0" text="USERNAME" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="214.0" prefHeight="20.0" prefWidth="329.0" text="PASSWORD" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Regular" size="20.0" />
+         </font>
+      </Label>
+      <Circle fill="#33d037" layoutX="464.0" layoutY="55.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="btn_test_ai" layoutX="242.0" layoutY="550.0" mnemonicParsing="false" text="Test" />
+      <Label id="error401" fx:id="lb_e401" layoutX="180.0" layoutY="428.0" prefHeight="18.0" prefWidth="170.0" stylesheets="@../css/login.css" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Bold" size="15.0" />
+         </font></Label>
+      <Circle fill="#ffc311" layoutX="27.0" layoutY="27.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="button_about_us" layoutX="154.0" layoutY="532.0" mnemonicParsing="false" styleClass="extra-text" stylesheets="@../css/login.css" text="ABOUT US" textFill="WHITE" underline="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tf_access_level" layoutX="75.0" layoutY="333.0" prefHeight="42.0" prefWidth="370.0" promptText="ACCESS LEVEL" styleClass="textfield" stylesheets="@../css/login.css">
+         <font>
+            <Font name="JetBrains Mono Regular" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf_password" layoutX="73.0" layoutY="241.0" prefHeight="42.0" prefWidth="370.0" promptText="PASSWORD" styleClass="textfield" stylesheets="@../css/login.css">
+         <font>
+            <Font name="JetBrains Mono Regular" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="76.0" layoutY="307.0" prefHeight="20.0" prefWidth="329.0" text="ACCESS LEVEL" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Regular" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
