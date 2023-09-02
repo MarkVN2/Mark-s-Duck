@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import net.byteboost.duck.gui.TestController;
 
 import java.io.IOException;
+import java.net.URI;
 import java.util.Objects;
 
 public class GUIutils {
@@ -36,5 +37,9 @@ public class GUIutils {
         stage.setTitle(title);
         stage.setScene(new Scene(root));
         stage.show();
+    }
+    public static void openSite(String url) throws Exception{
+        URI u = new URI(url);
+        java.awt.Desktop.getDesktop().browse(u);
     }
 }
