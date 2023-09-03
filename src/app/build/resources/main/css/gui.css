@@ -30,6 +30,9 @@
  -fx-scale-y:1.05;
  -fx-cursor:hand;
 }
-.wrong{
+.not-filled{
 -fx-border-color:red;
+}
+.filled{
+-fx-border-color:green;
 }

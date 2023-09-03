@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1e1e1e;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.TestController">
+   <children>
+      <Label fx:id="label_username" alignment="CENTER" contentDisplay="CENTER" layoutX="254.0" layoutY="145.0" text="Hello (username)." textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="label_access" alignment="CENTER" contentDisplay="CENTER" layoutX="238.0" layoutY="183.0" text="Your access level is" textAlignment="CENTER" textFill="WHITE" />
+      <Button fx:id="button_logout" layoutX="261.0" layoutY="222.0" mnemonicParsing="false" text="Logout" />
+   </children>
+</AnchorPane>

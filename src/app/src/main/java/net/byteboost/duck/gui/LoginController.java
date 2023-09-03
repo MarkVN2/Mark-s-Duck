@@ -37,9 +37,9 @@ public class LoginController implements Initializable {
         button_login.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                tf_password.getStyleClass().add("wrong");
-                tf_username.getStyleClass().add("wrong");
-                lb_e401.setText(" Credentials are Wrong ");
+                tf_password.getStyleClass().add("not-filled");
+                tf_username.getStyleClass().add("not-filled");
+                lb_e401.setText(" Credentials are wrong ");
                 DButils.LogInUser(event, tf_username.getText(), tf_password.getText());
             }
         });
