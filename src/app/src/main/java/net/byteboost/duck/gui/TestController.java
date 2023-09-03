@@ -6,7 +6,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+
 import net.byteboost.duck.utils.GUIutils;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -24,7 +26,7 @@ public class TestController implements Initializable {
         button_logout.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                GUIutils.changeScene(actionEvent, "/fxml/login.fxml","Login", null , null , null );
+                GUIutils.changeScene(actionEvent, "/fxml/login.fxml","Login", null , null , null , null);
             }
         });
     }

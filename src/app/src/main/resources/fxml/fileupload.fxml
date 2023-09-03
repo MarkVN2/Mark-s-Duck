@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="522.0" style="-fx-background-color: #1e1e1e;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.FileUploadController">
+   <children>
+      <Button id="login_btn" fx:id="button_logout" layoutX="136.0" layoutY="455.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" stylesheets="@../css/gui.css" text="LOG OUT" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Regular" size="24.0" />
+         </font></Button>
+      <Button fx:id="button_login" layoutX="293.0" layoutY="532.0" mnemonicParsing="false" styleClass="extra-text" stylesheets="@../css/gui.css" text="LOGIN" textFill="WHITE" underline="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="14.0" />
+         </font></Button>
+      <Circle fill="#33d037" layoutX="264.0" layoutY="144.0" radius="67.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="btn_test_ai" layoutX="242.0" layoutY="550.0" mnemonicParsing="false" text="Test" />
+      <Label id="error401" fx:id="lb_e401" layoutX="180.0" layoutY="396.0" prefHeight="18.0" prefWidth="170.0" stylesheets="@../css/gui.css" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Bold" size="15.0" />
+         </font></Label>
+      <Circle fill="#2fff12" layoutX="27.0" layoutY="27.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="button_about_us" layoutX="154.0" layoutY="532.0" mnemonicParsing="false" styleClass="extra-text" stylesheets="@../css/gui.css" text="ABOUT US" textFill="WHITE" underline="true">
+         <font>
+            <Font name="JetBrains Mono Regular" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="227.0" layoutY="411.0" />
+      <Button id="login_btn" fx:id="button_upload2" layoutX="137.0" layoutY="332.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" stylesheets="@../css/gui.css" text="MULTIPLE FILES" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Regular" size="24.0" />
+         </font>
+      </Button>
+      <Button id="login_btn" fx:id="button_upload" layoutX="137.0" layoutY="264.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" stylesheets="@../css/gui.css" text="ONE FILE" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Regular" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

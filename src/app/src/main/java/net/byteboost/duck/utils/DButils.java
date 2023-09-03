@@ -4,7 +4,6 @@ import javafx.scene.control.Alert;
 import net.byteboost.duck.DBkeys;
 
 import javafx.event.ActionEvent;
-import net.byteboost.duck.gui.LoginController;
 
 import java.sql.*;
 
@@ -29,7 +28,7 @@ public class DButils {
             resultSet = psCheckUserExists.executeQuery();
 
             if (resultSet.isBeforeFirst()){
-                System.out.print("user-already-taken");
+                System.out.print("user-already-taken\n");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("You cannot take this username.");
                 alert.show();
@@ -40,7 +39,7 @@ public class DButils {
                 psInsert.setString(3,access_level);
                 psInsert.executeUpdate();
 
-                GUIutils.changeScene(event,"/fxml/signup.fxml", "YOUARELOGGEDIN",username, null, access_level);
+                GUIutils.changeScene(event,"/fxml/signup.fxml", "YOUARELOGGEDIN",username, null, access_level, null);
             }
         } catch (SQLException exception){
             exception.printStackTrace();
@@ -99,12 +98,9 @@ public class DButils {
                     String retrievedPassword = resultSet.getString("password");
                     String retrievedAccessLevel = resultSetAccessLevel.getString("access_level");
                     if (retrievedPassword.equals(password)){
-                        GUIutils.changeScene(event,"/fxml/test.fxml", "YOUARELOGGEDIN!",username, null, retrievedAccessLevel);
+                        GUIutils.changeScene(event,"/fxml/fileupload.fxml", "YOUARELOGGEDIN!",username, null, retrievedAccessLevel, null);
                     }else{
-                        System.out.print("Password does not match username");
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setContentText("Provided credentials are wrong");
-                        alert.show();
+                        System.out.print("Password does not match username\n");
                     }
                 }
             }
