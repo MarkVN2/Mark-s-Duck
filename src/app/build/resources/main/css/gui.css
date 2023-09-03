@@ -36,3 +36,42 @@
 .filled{
 -fx-border-color:green;
 }
+.question{
+-fx-background-color: #33d037;
+-fx-background-radius: 12px;
+-fx-font-size: 18px;
+}
+.response{
+-fx-background-color: #33d037;
+-fx-background-radius: 12px;
+-fx-font-size: 18px;
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color:#181414;
+    -fx-border-width:5px;
+    -fx-border-radius:15px;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-height:2px;
+    -fx-background-color: white;
+    -fx-background-radius: 5em;
+}
