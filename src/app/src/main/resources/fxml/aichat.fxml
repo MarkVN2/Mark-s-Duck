@@ -5,17 +5,13 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="522.0" style="-fx-background-color: #1e1e1e;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.LoginController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="522.0" style="-fx-background-color: #1e1e1e;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.byteboost.duck.gui.AiChatController">
    <children>
-      <Button id="login_btn" fx:id="button_login" layoutX="136.0" layoutY="455.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" stylesheets="@../css/gui.css" text="LOG IN" textFill="WHITE">
+      <Button id="login_btn" fx:id="button_send" layoutX="136.0" layoutY="455.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" stylesheets="@../css/gui.css" text="SEND" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono Regular" size="24.0" />
          </font></Button>
-      <PasswordField fx:id="tf_password" layoutX="76.0" layoutY="384.0" prefHeight="42.0" prefWidth="370.0" promptText="PASSWORD" styleClass="textfield" stylesheets="@../css/gui.css">
-         <font>
-            <Font name="JetBrains Mono Regular" size="14.0" />
-         </font></PasswordField>
-      <TextField fx:id="tf_username" layoutX="76.0" layoutY="299.0" prefHeight="42.0" prefWidth="370.0" promptText="EMAIL ADDRESS OR USERNAME" styleClass="textfield" stylesheets="@../css/gui.css">
+      <TextField fx:id="tf_question" layoutX="76.0" layoutY="299.0" prefHeight="42.0" prefWidth="370.0" promptText="Message" styleClass="textfield" stylesheets="@../css/gui.css">
          <font>
             <Font name="JetBrains Mono Regular" size="14.0" />
          </font></TextField>
@@ -23,16 +19,6 @@
          <font>
             <Font name="JetBrains Mono Regular" size="14.0" />
          </font></Button>
-      <Label layoutX="76.0" layoutY="262.0" prefHeight="20.0" prefWidth="329.0" text="USERNAME" textFill="WHITE">
-         <font>
-            <Font name="JetBrains Mono Regular" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="76.0" layoutY="357.0" prefHeight="20.0" prefWidth="329.0" text="PASSWORD" textFill="WHITE">
-         <font>
-            <Font name="JetBrains Mono Regular" size="20.0" />
-         </font>
-      </Label>
       <Circle fill="#33d037" layoutX="264.0" layoutY="144.0" radius="67.0" stroke="BLACK" strokeType="INSIDE" />
       <Button fx:id="btn_test_ai" layoutX="242.0" layoutY="550.0" mnemonicParsing="false" text="Test" />
       <Label id="error401" fx:id="lb_e401" layoutX="180.0" layoutY="428.0" prefHeight="18.0" prefWidth="170.0" stylesheets="@../css/gui.css" textFill="WHITE">

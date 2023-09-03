@@ -1,11 +1,14 @@
 
 package net.byteboost.duck;
 
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
 
 import java.util.Objects;
 
@@ -34,10 +37,12 @@ import java.util.Objects;
 
 */
 
-public class App extends Application {
+public class App extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
+
+        stage.getIcons().add(new Image("https://imgs.search.brave.com/DfVipCWP3AbGQz2s-09ugYiziBPcnMKv_q58H2woa4U/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvNjgxLzY4MTQ5/NC5wbmc"));
 
         final boolean resizable = stage.isResizable();
 
