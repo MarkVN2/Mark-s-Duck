@@ -4,3 +4,4 @@ This is a personal fork of [ByteBoost's Duck](https://github.com/Byte-Boost/Duck
 
 ### Requirements
 - Java 17+
+- JavaFX 11
