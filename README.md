@@ -1,6 +1,9 @@
 # Duck
 This is a personal fork of [ByteBoost's Duck](https://github.com/Byte-Boost/Duck).
-<br> This README is going to be dry for a time.
+
+>[!WARNING]
+> This is a crude version and i don't intend on continuing it anytime soon, if you want to see how the project turned out
+> use the link above.
 
 ### Requirements
 - Java 17+
